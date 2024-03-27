@@ -6,6 +6,7 @@
 
 import 'package:flutter/foundation.dart';
 
+import 'ground_overlay.dart';
 import 'types.dart';
 
 /// A container object for all the types of maps objects.
@@ -21,6 +22,7 @@ class MapObjects {
     this.polylines = const <Polyline>{},
     this.circles = const <Circle>{},
     this.tileOverlays = const <TileOverlay>{},
+    this.groundOverlays = const <GroundOverlay>{},
   });
 
   final Set<Marker> markers;
@@ -28,4 +30,5 @@ class MapObjects {
   final Set<Polyline> polylines;
   final Set<Circle> circles;
   final Set<TileOverlay> tileOverlays;
+  final Set<GroundOverlay> groundOverlays;
 }

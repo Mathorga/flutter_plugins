@@ -46,7 +46,10 @@ export 'package:google_maps_flutter_platform_interface/google_maps_flutter_platf
         Tile,
         TileOverlayId,
         TileOverlay,
-        TileProvider;
+        TileProvider,
+        // @Luka Added ground overlay classes.
+        GroundOverlay,
+        GroundOverlayId;
 
 part 'src/controller.dart';
 part 'src/google_map.dart';
