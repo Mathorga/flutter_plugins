@@ -576,6 +576,11 @@ final class GoogleMapController
   }
 
   @Override
+  public void onGroundOverlayClick(GroundOverlay groundOverlay) {
+      groundOverlaysController.onGroundOverlayTap(groundOverlay.getId());
+  }
+
+  @Override
   public void dispose() {
     if (disposed) {
       return;
