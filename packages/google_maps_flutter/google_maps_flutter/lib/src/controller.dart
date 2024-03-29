@@ -55,6 +55,7 @@ class GoogleMapController {
     GoogleMapsFlutterPlatform.instance.onInfoWindowTap(mapId: mapId).listen((InfoWindowTapEvent e) => _googleMapState.onInfoWindowTap(e.value));
     GoogleMapsFlutterPlatform.instance.onPolylineTap(mapId: mapId).listen((PolylineTapEvent e) => _googleMapState.onPolylineTap(e.value));
     GoogleMapsFlutterPlatform.instance.onPolygonTap(mapId: mapId).listen((PolygonTapEvent e) => _googleMapState.onPolygonTap(e.value));
+    GoogleMapsFlutterPlatform.instance.onGroundOverlayTap(mapId: mapId).listen((GroundOverlayTapEvent e) => _googleMapState.onGroundOverlayTap(e.value));
     GoogleMapsFlutterPlatform.instance.onCircleTap(mapId: mapId).listen((CircleTapEvent e) => _googleMapState.onCircleTap(e.value));
     GoogleMapsFlutterPlatform.instance.onTap(mapId: mapId).listen((MapTapEvent e) => _googleMapState.onTap(e.position));
     GoogleMapsFlutterPlatform.instance.onLongPress(mapId: mapId).listen((MapLongPressEvent e) => _googleMapState.onLongPress(e.position));
