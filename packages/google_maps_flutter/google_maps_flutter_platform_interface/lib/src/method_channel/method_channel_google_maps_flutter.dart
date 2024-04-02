@@ -363,6 +363,18 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
   }
 
   @override
+  Future<void> updateGroundOverlays(
+    GroundOverlayUpdates groundOverlayUpdates, {
+    required int mapId,
+  }) {
+    assert(groundOverlayUpdates != null);
+    return channel(mapId).invokeMethod<void>(
+      'groundOverlay#update',
+      groundOverlayUpdates.toJson(),
+    );
+  }
+
+  @override
   Future<void> updateTileOverlays({
     required Set<TileOverlay> newTileOverlays,
     required int mapId,
