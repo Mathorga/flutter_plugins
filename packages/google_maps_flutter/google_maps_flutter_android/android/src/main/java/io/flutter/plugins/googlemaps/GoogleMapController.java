@@ -384,11 +384,11 @@ final class GoogleMapController
         }
       case "groundOverlays#update": {
           Object groundOverlaysToAdd = call.argument("groundOverlaysToAdd");
-          groundOverlaysController.addOverlays((List<Object>) groundOverlaysToAdd);
+          groundOverlaysController.addOverlays(groundOverlaysToAdd);
           Object groundOverlaysToChange = call.argument("groundOverlaysToChange");
-          groundOverlaysController.changeGroundOverlays((List<Object>) groundOverlaysToChange);
+          groundOverlaysController.changeGroundOverlays(groundOverlaysToChange);
           Object groundOverlayIdsToRemove = call.argument("groundOverlayIdsToRemove");
-          groundOverlaysController.removeGroundOverlays((List<Object>) groundOverlayIdsToRemove);
+          groundOverlaysController.removeGroundOverlays(groundOverlayIdsToRemove);
           result.success(null);
           break;
         }
