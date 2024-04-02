@@ -11,7 +11,7 @@ class GroundOverlayBuilder implements GroundOverlayOptionsSink {
   private boolean consumeTapEvents;
 
   GroundOverlayBuilder() {
-    groundOverlayOptions = new GroundOverlayOptions();
+    this.groundOverlayOptions = new GroundOverlayOptions();
   }
 
   GroundOverlayOptions build() {

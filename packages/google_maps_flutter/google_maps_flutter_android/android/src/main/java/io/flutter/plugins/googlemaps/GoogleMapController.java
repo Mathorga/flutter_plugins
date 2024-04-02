@@ -383,6 +383,7 @@ final class GoogleMapController
           break;
         }
       case "groundOverlays#update": {
+          invalidateMapIfNeeded();
           Object groundOverlaysToAdd = call.argument("groundOverlaysToAdd");
           groundOverlaysController.addOverlays(groundOverlaysToAdd);
           Object groundOverlaysToChange = call.argument("groundOverlaysToChange");
