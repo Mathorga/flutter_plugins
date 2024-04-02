@@ -263,6 +263,13 @@ class GoogleMapsFlutterAndroid extends GoogleMapsFlutterPlatform {
           CircleId(arguments['circleId']! as String),
         ));
         break;
+      case 'groundOverlay#onTap':
+        final Map<String, Object?> arguments = _getArgumentDictionary(call);
+        _mapEventStreamController.add(GroundOverlayTapEvent(
+          mapId,
+          GroundOverlayId(arguments['GroundOverlayId']! as String),
+        ));
+        break;
       case 'map#onTap':
         final Map<String, Object?> arguments = _getArgumentDictionary(call);
         _mapEventStreamController.add(MapTapEvent(
